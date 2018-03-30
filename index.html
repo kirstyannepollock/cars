@@ -1,0 +1,90 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="css/slide-it-in.css">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous">
+    </script>
+
+
+  <!-- Custom -->
+  <link href="css/slide-it-in.css" rel="stylesheet" type="text/css">
+
+  <script src="js/slide-it-in.js"></script>
+
+  <style>
+  </style>
+</head>
+
+<body>
+  <section>
+
+    <div id="slide">
+      <h1>Slide It In</h1>
+    </div>
+
+
+    <div class="box crop">
+      <img src="img/car-1.jpg" alt="">
+    </div>
+    <div class="box crop">
+      <img src="img/car-3.jpg" alt="">
+    </div>
+    <div class="box crop">
+      <img src="img/car-4.jpg" alt="">
+    </div>
+    <div class="box crop">
+      <img src="img/car-1.jpg" alt="">
+    </div>
+    <div class="box crop">
+      <img src="img/car-1.jpg" alt="">
+    </div>
+    <div class="box crop">
+      <img src="img/car-1.jpg" alt="">
+    </div>
+    <div class="box crop">
+      <img src="img/car-3.jpg" alt="">
+    </div>
+    <div class="box crop">
+      <img src="img/car-4.jpg" alt="">
+    </div>
+    <div class="box crop">
+      <img src="img/car-1.jpg" alt="">
+    </div>
+    <div class="box crop">
+      <img src="img/car-1.jpg" alt="">
+    </div>
+
+  </section>
+
+
+
+  <script>
+    var win = $(window);
+    var allMods = $(".box");
+
+
+    slide_in(null);
+
+
+    function slide_in(event) {
+
+      //debugger;
+      $(".box").each(function (i, el) {
+        if (isAnyPartOfElementInViewport(el)) {
+          $(el).addClass("come-in");
+        } else {
+          $(el).removeClass("come-in");
+        }
+      });
+    }
+
+    win.scroll(slide_in);
+
+  </script>
+
+</body>
+
+
+</html>
